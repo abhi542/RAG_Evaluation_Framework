@@ -18,30 +18,32 @@ This framework solves that by introducing a **Unified Quality Index (RQI)** that
 The system is built on a modular "Ingest-Retrieve-Generate" pipeline using **LangChain Expression Language (LCEL)** for production-grade reliability.
 
 ```mermaid
-graph TD
-    subgraph Pipeline ["RAG Pipeline"]
-        A["PDF Documents"] -->|Ingest| B("Load Docs")
-        B -->|Embed| C{"FAISS Index"}
-        D["User Query"] -->|Search| C
-        C -->|Top 3 Chunks| E["Context + Prompt"]
-        E -->|Generate| F["LLM (Gemini)"]
-        F -->|Answer| G["Final Output"]
+graph LR
+    %% Phase 1: Ingestion
+    subgraph Ingestion ["Phase 1: Ingestion (Offline)"]
+        A[("PDF Data")] -->|Load & Chunk| B["Text Chunks"]
+        B -->|Embed| C[("FAISS Index")]
     end
 
-    subgraph Evaluation ["Evaluation Suite"]
-        H("Retrieval Eval")
-        I("Generation Eval")
-        J("RAGAS Eval")
-        K{"RQI Score (A-F)"}
+    %% Phase 2: Runtime
+    subgraph Pipeline ["Phase 2: RAG Pipeline (Online)"]
+        Q(("User Query")) -->|Embed| C
+        C -->|Retrieve Top-3| D["Context"]
+        D -->|Inject| E["Prompt"]
+        E -->|Query| F["Gemini LLM"]
+        F -->|Generate| G["Final Answer"]
     end
 
-    C -.->|Validate| H
-    G -.->|Check Facts| I
-    G -.->|Judge Reasoning| J
-    
-    H --> K
-    I --> K
-    J --> K
+    %% Phase 3: Verification
+    subgraph Eval ["Phase 3: Evaluation Suite"]
+        D -.->|Recall Check| H["Retrieval Eval"]
+        G -.->|Fact Check| I["Generation Eval"]
+        G -.->|Reasoning Judge| J["RAGAS Eval"]
+        
+        H -->|Score| K{{"RQI Grade"}}
+        I -->|Score| K
+        J -->|Score| K
+    end
 
     style C fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#bbf,stroke:#333,stroke-width:2px
