@@ -18,16 +18,34 @@ This framework solves that by introducing a **Unified Quality Index (RQI)** that
 The system is built on a modular "Ingest-Retrieve-Generate" pipeline using **LangChain Expression Language (LCEL)** for production-grade reliability.
 
 ```mermaid
-graph LR
-    A["PDF Documents"] -->|Ingest & Chunk| B("Load Docs")
-    B -->|Embed vectors| C{"FAISS Index"}
-    D["User Query"] -->|Search| C
-    C -->|Top 3 Chunks| E["Context + Prompt"]
-    E -->|Generate| F["LLM (Gemini)"]
-    F -->|Answer| G["Final Output"]
+graph TD
+    subgraph Pipeline ["RAG Pipeline"]
+        A["PDF Documents"] -->|Ingest| B("Load Docs")
+        B -->|Embed| C{"FAISS Index"}
+        D["User Query"] -->|Search| C
+        C -->|Top 3 Chunks| E["Context + Prompt"]
+        E -->|Generate| F["LLM (Gemini)"]
+        F -->|Answer| G["Final Output"]
+    end
+
+    subgraph Evaluation ["Evaluation Suite"]
+        H("Retrieval Eval")
+        I("Generation Eval")
+        J("RAGAS Eval")
+        K{"RQI Score (A-F)"}
+    end
+
+    C -.->|Validate| H
+    G -.->|Check Facts| I
+    G -.->|Judge Reasoning| J
     
+    H --> K
+    I --> K
+    J --> K
+
     style C fill:#f9f,stroke:#333,stroke-width:2px
     style F fill:#bbf,stroke:#333,stroke-width:2px
+    style K fill:#ff9,stroke:#333,stroke-width:4px
 ```
 
 ## ⚙️ End-to-End Workflow (Deep Dive)
