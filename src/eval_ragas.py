@@ -105,13 +105,16 @@ def evaluate_ragas(test_file, index_dir, provider="offline", llm_provider="opena
     
     # Calculate average across all metrics for single scalar
     if not results_df.empty:
-         # Exclude non-numeric columns if any (though usually all are numeric metrics)
-         # In RAGAS, columns are metrics + 'question', 'answer', 'contexts', 'ground_truth'.
-         # We only want to average the metric columns.
-         metric_cols = [col for col in results_df.columns if col not in ['question', 'answer', 'contexts', 'ground_truth']]
+         # Explicitly select numeric metric columns
+         target_metrics = ['context_precision', 'context_recall', 'faithfulness', 'answer_relevancy']
+         # Only keep columns that actually exist in the dataframe
+         metric_cols = [col for col in target_metrics if col in results_df.columns]
+         
          if metric_cols:
+             print(f"Calculating average from metrics: {metric_cols}")
              avg_ragas_score = results_df[metric_cols].mean().mean()
          else:
+             print("Warning: No standard metric columns found in results.")
              avg_ragas_score = 0
     else:
          avg_ragas_score = 0

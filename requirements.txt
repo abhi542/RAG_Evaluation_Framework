@@ -11,7 +11,9 @@ ragas
 datasets
 openai
 matplotlib
+langchain-community
 seaborn
 pandas
 langchain-google-genai
 langchain-huggingface
+langchain-groq

@@ -1,32 +1,60 @@
 [
     {
-        "query": "What object was sticking out of Schmidt's torso when Calvin drew his attention to it?",
+        "query": "What is the name tag retrieved by Ragging Senior 2 from Rancho's bag?",
         "expected_keywords": [
-            "BUTTERFLY KNIFE",
-            "torso",
-            "Calvin",
-            "Schmidt",
-            "sticking"
+            "name tag",
+            "Ragging Senior 2",
+            "Rancho's bag"
         ]
     },
     {
-        "query": "What figures are listed along with page 127, and what geometric concepts do they represent?",
+        "query": "What is the initial method of Joy's demise in the screenplay?",
         "expected_keywords": [
-            "Figure 23.4",
-            "Figure 23.5",
-            "Right Triangle",
-            "Law of Cosines",
-            "127"
+            "Joy's demise",
+            "sleeping pills"
         ]
     },
     {
-        "query": "Who pleaded with the Director to stop hitting Rancho?",
+        "query": "What is the name of the character who is not willing to support his family?",
         "expected_keywords": [
-            "Farhan",
-            "Raju",
-            "pleading",
-            "call out",
-            "stop"
+            "RAJU"
+        ]
+    },
+    {
+        "generation_cases": [
+            {
+                "query": "What are the reasons for RAJU's financial struggles?",
+                "expected_keywords": [
+                    "dowry",
+                    "car",
+                    "pension",
+                    "saree"
+                ]
+            },
+            {
+                "ragas_cases": [
+                    {
+                        "query": "How do the character's financial struggles affect his family members?",
+                        "ground_truth": "The character RAJU's financial struggles affect his family members as his dad's medicines swallow up his mom's pension. This forces his sister to delay marriage and his mom to go without buying a single saree in five years."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "query": "What is the prop gun that Walt shoots from the hip?",
+        "expected_keywords": [
+            "prop gun",
+            "Walt",
+            "Jenko"
+        ]
+    },
+    {
+        "query": "What was the happiest day of the narrator's life?",
+        "expected_keywords": [
+            "telegram",
+            "admission",
+            "FTII"
         ]
     }
 ]

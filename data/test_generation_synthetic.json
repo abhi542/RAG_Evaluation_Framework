@@ -1,32 +1,36 @@
 [
     {
-        "query": "Describe the immediate aftermath of Schmidt defeating the final Angry White Boy, focusing on Schmidt's injury and the subsequent actions of Tim and Calvin.",
+        "query": "What is the purpose of ragging in the context of the story?",
         "expected_keywords": [
-            "butterfly knife",
-            "torso",
-            "Calvin",
-            "nunchucks",
-            ".357 MAGNUM"
+            "ragging",
+            "initiation",
+            "ritual"
         ]
     },
     {
-        "query": "Summarize the content presented in the list of figures and their associated page number.",
+        "query": "How do objects contribute to the storytelling in 3 Idiots?",
         "expected_keywords": [
-            "Figure 23.4",
-            "Right Triangle",
-            "Law of Cosines",
-            "Figure 23.5",
-            "127"
+            "objects",
+            "storytelling",
+            "3 Idiots"
         ]
     },
     {
-        "query": "Summarize the confrontation that occurred after the Director entered the room, detailing what he found and how he responded to the students.",
+        "query": "What happens in the fight between Walt and Schmidt?",
         "expected_keywords": [
-            "Director",
-            "umbrella",
-            "Rancho",
-            "question paper",
-            "pleading"
+            "fight",
+            "Walt",
+            "Schmidt"
+        ]
+    },
+    {
+        "query": "What were the narrator's initial expectations about getting admission to FTII and how did these expectations change over time?",
+        "expected_keywords": [
+            "admission",
+            "FTII",
+            "expectations",
+            "illusion",
+            "inferiority complex"
         ]
     }
 ]
