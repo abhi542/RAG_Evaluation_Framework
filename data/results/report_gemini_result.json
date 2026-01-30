@@ -1,0 +1,8 @@
+{
+    "model_name": "gemini_result",
+    "retrieval": 0.5333333333333333,
+    "generation": 0.7,
+    "ragas": 0.7167414234698958,
+    "rqi": 0.6383557603743021,
+    "grade": "C"
+}

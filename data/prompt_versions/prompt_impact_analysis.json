@@ -1,0 +1,330 @@
+{
+  "What is the purpose of ragging in the context of the story?": {
+    "question": "What is the purpose of ragging in the context of the story?",
+    "prompt_results": {
+      "prompt_v0": {
+        "response": "The provided context describes a scene involving a \"Ragging Senior 1\" and Rancho's actions to retaliate against him (electrocution), but it does not state the overall purpose of ragging in the context of the story.",
+        "metadata": {
+          "query": "What is the purpose of ragging in the context of the story?",
+          "retrieved_chunks": [
+            "between Farhan and his father is again inspired by the conversation I had with my \nfather which I have mentioned in detail in the introduction to this book. \nAJ: I have already told you about the impostor story. Apart from the search for the \nthird friend and the imposter track, the third primary element in the story is the \nbet between Chatur and Rancho. This bet signi\ufb01  es the clash of rival ideologies. We \ngot the idea for this from an anecdote from Vinod\u2019s initial years in the industry. After \nthe trial of one of the \ufb01  lms made by a big Bollywood producer, Vinod hitched a \nride with him in his posh car to be dropped to the nearest bus stop. The producer \nasked Vinod what he thought about the \ufb01  lm. Vinod launched into shredding the \nscreenplay bit by bit and let the man know without mincing words that the \ufb01  lm \nwas utter rubbish. The gentleman turned around and said, \u201cJadd vaddi gaadi lenga \nna tadd dekhanga tu kaisi picture banayenga\u201d  (When you get used to riding in a big",
+            "All we asked of the watch was to save us a few minutes. What it gifted us was the \nkernel, the essence, the very nucleus of the \ufb01  lm. \nStrangely, we stumbled on the extraordinary potential of objects  through a problem \nthat we faced very early in the screenplay, a problem that is every writer\u2019s nightmare: \na big clich\u00e9. \nThe scene: The Director\u2019s motivational speech to the freshmen on their \ufb01  rst day \nat college. \nAudiences around the world have heard and witnessed such spiel a zillion times, \nranging from the great bombast in Patton and Full Metal Jacket  to the lamest \nofferings from the trashiest of campus \ufb02  icks. \nT om Stoppard, the great English playwright, came to the rescue. Not in person, \nbut in spirit \u2014 boleto Chetana. Stoppard thrives on introducing bizarre objects into \nhis plays and later providing perfectly plausible explanations for them. One of his",
+            "46\nRAGGING SENIOR 1 \nSeven!\nRAGGING SENIOR 1 \nEight! Nine!\nRAGGING SENIOR 1 \nT en!\nRancho turns off the switch that the \nhanging light was attached to. With his \nteeth, he bites off the plastic from the \nends of the wire.\njSfxx lhfu;j 1\nlkr!\nRancho places the exposed wire ends \nstrategically under a metal spoon, and \nstarts binding the spoon to a wooden \nruler. Outside, in desperation, Ragging \nSenior 1 calls out again. \njSfxx lhfu;j 1\nvkB! ukS!\nA laugh escapes Farhan. The Senior whips \naround menacingly. Raju surreptitiously \nindicates Farhan to him. Inside the room, \nRancho has \ufb01 nished binding the spoon to \nthe wooden ruler.\njSfxx lhfu;j 1\nnl!\nAngry, frustrated and with no other option, \nthe Senior walks to the door, faces it and \nunzips. Unseen by him, from underneath \nthe door, Rancho slides out the spoon. \nHe then puts on the switch that the wire \nunder the spoon is connected to. The \nSenior starts urinating. As the stream of \nurine hits the spoon, he gets electrocuted."
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_852",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 326
+            },
+            {
+              "chunk_id": "chunk_924",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 348
+            },
+            {
+              "chunk_id": "chunk_415",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 45
+            }
+          ],
+          "prompt_version": "prompt_v0"
+        },
+        "scores": {
+          "model_name": "prompt_v0",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7019025493102923,
+          "rqi": 0.723904098126421,
+          "grade": "B",
+          "prompt_version": "prompt_v0"
+        }
+      },
+      "prompt_v1": {
+        "response": "Based on the provided context, the purpose of ragging is not explicitly stated. The text only describes a scene where a \"Ragging Senior 1\" is counting and acting menacingly toward the freshmen, which leads to Rancho retaliating by electrocuting the senior.",
+        "metadata": {
+          "query": "What is the purpose of ragging in the context of the story?",
+          "retrieved_chunks": [
+            "between Farhan and his father is again inspired by the conversation I had with my \nfather which I have mentioned in detail in the introduction to this book. \nAJ: I have already told you about the impostor story. Apart from the search for the \nthird friend and the imposter track, the third primary element in the story is the \nbet between Chatur and Rancho. This bet signi\ufb01  es the clash of rival ideologies. We \ngot the idea for this from an anecdote from Vinod\u2019s initial years in the industry. After \nthe trial of one of the \ufb01  lms made by a big Bollywood producer, Vinod hitched a \nride with him in his posh car to be dropped to the nearest bus stop. The producer \nasked Vinod what he thought about the \ufb01  lm. Vinod launched into shredding the \nscreenplay bit by bit and let the man know without mincing words that the \ufb01  lm \nwas utter rubbish. The gentleman turned around and said, \u201cJadd vaddi gaadi lenga \nna tadd dekhanga tu kaisi picture banayenga\u201d  (When you get used to riding in a big",
+            "All we asked of the watch was to save us a few minutes. What it gifted us was the \nkernel, the essence, the very nucleus of the \ufb01  lm. \nStrangely, we stumbled on the extraordinary potential of objects  through a problem \nthat we faced very early in the screenplay, a problem that is every writer\u2019s nightmare: \na big clich\u00e9. \nThe scene: The Director\u2019s motivational speech to the freshmen on their \ufb01  rst day \nat college. \nAudiences around the world have heard and witnessed such spiel a zillion times, \nranging from the great bombast in Patton and Full Metal Jacket  to the lamest \nofferings from the trashiest of campus \ufb02  icks. \nT om Stoppard, the great English playwright, came to the rescue. Not in person, \nbut in spirit \u2014 boleto Chetana. Stoppard thrives on introducing bizarre objects into \nhis plays and later providing perfectly plausible explanations for them. One of his",
+            "46\nRAGGING SENIOR 1 \nSeven!\nRAGGING SENIOR 1 \nEight! Nine!\nRAGGING SENIOR 1 \nT en!\nRancho turns off the switch that the \nhanging light was attached to. With his \nteeth, he bites off the plastic from the \nends of the wire.\njSfxx lhfu;j 1\nlkr!\nRancho places the exposed wire ends \nstrategically under a metal spoon, and \nstarts binding the spoon to a wooden \nruler. Outside, in desperation, Ragging \nSenior 1 calls out again. \njSfxx lhfu;j 1\nvkB! ukS!\nA laugh escapes Farhan. The Senior whips \naround menacingly. Raju surreptitiously \nindicates Farhan to him. Inside the room, \nRancho has \ufb01 nished binding the spoon to \nthe wooden ruler.\njSfxx lhfu;j 1\nnl!\nAngry, frustrated and with no other option, \nthe Senior walks to the door, faces it and \nunzips. Unseen by him, from underneath \nthe door, Rancho slides out the spoon. \nHe then puts on the switch that the wire \nunder the spoon is connected to. The \nSenior starts urinating. As the stream of \nurine hits the spoon, he gets electrocuted."
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_852",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 326
+            },
+            {
+              "chunk_id": "chunk_924",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 348
+            },
+            {
+              "chunk_id": "chunk_415",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 45
+            }
+          ],
+          "prompt_version": "prompt_v1"
+        },
+        "change_summary": "The New Response is more grounded and complete because it explicitly summarizes the specific actions and details of the ragging scene (counting, menacing behavior, electrocution) that led to Rancho's retaliation. This elaboration provides better evidence for the shared conclusion that the overall purpose of ragging is not stated.",
+        "scores": {
+          "model_name": "prompt_v1",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7061027230168938,
+          "rqi": 0.7251641502384014,
+          "grade": "B",
+          "prompt_version": "prompt_v1"
+        }
+      }
+    }
+  },
+  "How do objects contribute to the storytelling in 3 Idiots?": {
+    "question": "How do objects contribute to the storytelling in 3 Idiots?",
+    "prompt_results": {
+      "prompt_v0": {
+        "response": "Objects contribute to the storytelling in *3 Idiots* by providing the bulwark for important story beats, such as the twin movement where Raju faces a job interview and Farhan wins his father's blessings. They help slash dialogue and deepen emotion, preventing scenes from degenerating into sermons. Objects also provide the final turn of the screw in scenes, making a nebulous mystery concrete and thickening the plot.",
+        "metadata": {
+          "query": "How do objects contribute to the storytelling in 3 Idiots?",
+          "retrieved_chunks": [
+            "I am ashamed to admit that for one full year, for the \ufb01  rst \ufb01 ve or six drafts of \nthe screenplay, we had something as lame as sleeping pills as the means of Joy\u2019s \ndemise. Peel off a few drafts of the screenplay, and what you stare at is pure \nmediocrity! \nA few  rings, a wheelchair, a laptop, and a letter, these simple objects provided us \nwith the bulwark for the most important beat of the story in 3 Idiots \u2014 the twin \nmovement where Raju Rastogi, a changed man after his suicide attempt, fearlessly \nfaces a job interview and Farhan, unyielding but loving, wins his father\u2019s blessings \nfor leaving engineering and embracing photography. Without the aid of objects, \nthe scenes would have needed so many lines of dialogue to convey the complex \nemotions that they would have degenerated into sermons. Objects helped us slash \nthe dialogue and deepen the emotion.",
+            "a communication gaffe that might soon be sorted out. So he added a few extra \nseconds to our scene: After meeting the stranger, Farhan sees on the wall, a group photo \nof the classmates, featuring all three friends but the place where Rancho sat in the real \nphoto is now occupied by this total stranger. The wrong man. INTERMISSION . The \ninanimate photo provides the scene with the \ufb01  nal turn of the screw. The nebulous \nmystery suddenly becomes concrete. The plot thickens. \nAm I reading too much into this concept of \u2018solidi\ufb01  cation\u2019 or \u2018concretisation\u2019 \nthrough objects? Am I zealously overanalysing a moot point? Are there no major \nscenes in 3 Idiots  that do not rely on objects? Wrong. In fact, the most  famous \nscene of the \ufb01  lm, Chatur\u2019s speech that goes outrageously wrong [ chamatkar versus \nbalatkar, dhan versus sttun] relies entirely on wordplay. So does my favorite scene: \nRancho\u2019s deliberately obscure, whimsical, and wooly-headed de\ufb01  nition of books",
+            "326\nThe imposter passes out of the Institute, joins the \ufb01  lm industry, changes back to \nhis real identity and makes \ufb01  lms. This real-life story, which not too many people \nknow about, inspired the whole Rancho-imposter track.\nRH: We combined the search and the imposter tracks and got the story of the \n\ufb01 lm. The binding thread which was missing to keep the narrative moving was now \nin place. This was probably one of the most critical of the challenges we faced in \nwriting 3 Idiots. \nWhat according to you is the core of 3 Idiots?\nAJ: The \ufb01 rst scene that we wrote for 3 Idiots was the conversation between Boman \nand Aamir at Joy\u2019s funeral. This scene was in a different form and shape the \ufb01  rst \ntime we wrote it. On the night of the suicide, Rancho goes up to the tower in \nthe campus, rings the bell, gathers the students and delivers a speech. But in this \nform, the scene became too dramatic, grim, and preachy. We worked for days to"
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_938",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 352
+            },
+            {
+              "chunk_id": "chunk_944",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 354
+            },
+            {
+              "chunk_id": "chunk_848",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 325
+            }
+          ],
+          "prompt_version": "prompt_v0"
+        },
+        "scores": {
+          "model_name": "prompt_v0",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7019025493102923,
+          "rqi": 0.723904098126421,
+          "grade": "B",
+          "prompt_version": "prompt_v0"
+        }
+      },
+      "prompt_v1": {
+        "response": "According to the context, objects play a significant role in the storytelling of 3 Idiots by providing a \"bulwark\" for important beats in the story. They help to convey complex emotions without the need for excessive dialogue, which could make the scenes feel like sermons. The use of objects, such as a few rings, a wheelchair, a laptop, and a letter, allows the filmmakers to \"slash the dialogue and deepen the emotion.\" Additionally, inanimate objects like a group photo can provide a \"final turn of the screw\" and make a nebulous mystery more concrete, thickening the plot. Overall, objects contribute to the storytelling in 3 Idiots by adding depth and emotion to key scenes without relying on excessive dialogue.",
+        "metadata": {
+          "query": "How do objects contribute to the storytelling in 3 Idiots?",
+          "retrieved_chunks": [
+            "I am ashamed to admit that for one full year, for the \ufb01  rst \ufb01 ve or six drafts of \nthe screenplay, we had something as lame as sleeping pills as the means of Joy\u2019s \ndemise. Peel off a few drafts of the screenplay, and what you stare at is pure \nmediocrity! \nA few  rings, a wheelchair, a laptop, and a letter, these simple objects provided us \nwith the bulwark for the most important beat of the story in 3 Idiots \u2014 the twin \nmovement where Raju Rastogi, a changed man after his suicide attempt, fearlessly \nfaces a job interview and Farhan, unyielding but loving, wins his father\u2019s blessings \nfor leaving engineering and embracing photography. Without the aid of objects, \nthe scenes would have needed so many lines of dialogue to convey the complex \nemotions that they would have degenerated into sermons. Objects helped us slash \nthe dialogue and deepen the emotion.",
+            "a communication gaffe that might soon be sorted out. So he added a few extra \nseconds to our scene: After meeting the stranger, Farhan sees on the wall, a group photo \nof the classmates, featuring all three friends but the place where Rancho sat in the real \nphoto is now occupied by this total stranger. The wrong man. INTERMISSION . The \ninanimate photo provides the scene with the \ufb01  nal turn of the screw. The nebulous \nmystery suddenly becomes concrete. The plot thickens. \nAm I reading too much into this concept of \u2018solidi\ufb01  cation\u2019 or \u2018concretisation\u2019 \nthrough objects? Am I zealously overanalysing a moot point? Are there no major \nscenes in 3 Idiots  that do not rely on objects? Wrong. In fact, the most  famous \nscene of the \ufb01  lm, Chatur\u2019s speech that goes outrageously wrong [ chamatkar versus \nbalatkar, dhan versus sttun] relies entirely on wordplay. So does my favorite scene: \nRancho\u2019s deliberately obscure, whimsical, and wooly-headed de\ufb01  nition of books",
+            "326\nThe imposter passes out of the Institute, joins the \ufb01  lm industry, changes back to \nhis real identity and makes \ufb01  lms. This real-life story, which not too many people \nknow about, inspired the whole Rancho-imposter track.\nRH: We combined the search and the imposter tracks and got the story of the \n\ufb01 lm. The binding thread which was missing to keep the narrative moving was now \nin place. This was probably one of the most critical of the challenges we faced in \nwriting 3 Idiots. \nWhat according to you is the core of 3 Idiots?\nAJ: The \ufb01 rst scene that we wrote for 3 Idiots was the conversation between Boman \nand Aamir at Joy\u2019s funeral. This scene was in a different form and shape the \ufb01  rst \ntime we wrote it. On the night of the suicide, Rancho goes up to the tower in \nthe campus, rings the bell, gathers the students and delivers a speech. But in this \nform, the scene became too dramatic, grim, and preachy. We worked for days to"
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_938",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 352
+            },
+            {
+              "chunk_id": "chunk_944",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 354
+            },
+            {
+              "chunk_id": "chunk_848",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 325
+            }
+          ],
+          "prompt_version": "prompt_v1"
+        },
+        "change_summary": "The New Response differs from the Baseline Response in that it provides more specific examples of objects used in the storytelling of 3 Idiots, making the explanation more grounded and concrete. This addition of detail improves the overall quality of the response, making it more comprehensive and easier to understand.",
+        "scores": {
+          "model_name": "prompt_v1",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7061027230168938,
+          "rqi": 0.7251641502384014,
+          "grade": "B",
+          "prompt_version": "prompt_v1"
+        }
+      }
+    }
+  },
+  "What happens in the fight between Walt and Schmidt?": {
+    "question": "What happens in the fight between Walt and Schmidt?",
+    "prompt_results": {
+      "prompt_v0": {
+        "response": "After Walt shoots Jenko and aims his pistol at Molly, Schmidt grabs Walt\u2019s gun with one hand and punches him with the other, splitting Walt's nose. They struggle against the catwalk railing, with Walt gripping the pistol and pushing it toward Schmidt. Schmidt uses his free hand to grab an electrical cable and wrap it around Walt's neck. Schmidt then throws Walt off the catwalk, leaving him hanging by the neck by the cable.",
+        "metadata": {
+          "query": "What happens in the fight between Walt and Schmidt?",
+          "retrieved_chunks": [
+            "122.\nSCHMIDTYou're a bad D.A.D.\nWALTAnd you're a shitty actor. If you sold the weight of that prop gun a little more, I might not have shot your girlfriend.\nWalt SHOOTS a compact 9mm from the hip, hitting Jenko in the vest. Jenko DROPS the .357 off the catwalk.\nWalt aims his pistol towards Molly on the stage below. Schmidt GRABS Walt\u2019s gun with one hand and PUNCHES him with the other, splitting his nose in half.\nThey struggle against the catwalk railing. Walt grips the pistol like a vice, pushing it towards Schmidt, jaw grinding.\nSchmidt uses his free hand to grab an ELECTRICAL CABLE and wrap it around Walt's neck.\nWalt's face turns red and his veins pop as he muscles his gun towards Schmidt\u2019s face.\nSchmidt roars with rage and throws Walt off the catwalk.\nWalt JERKS at the end of the cable, hanging by the neck. The entire Prom looks up as he shits and pisses his white tuxedo.",
+            "107.\nSCHMIDT/JENKOHoly fucking shit.\nWalt pops an H.F.S. wafer into his mouth.\nWALTIndeed.\nWalt reveals a RIFLE perched on his knee, barrel pointed at Schmidt and Jenko.\nWALTCalvin?\nCalvin appears behind Schmidt and Jenko and pats them down.\nCALVINClean.\nWALTGo give Molly her final snack.\nCalvin leers at Schmidt and exits.\nSCHMIDTYou don\u2019t get the Pinata until I get the girl.\nWalt slowly crunches into another H.F.S. wafer. He walks up to Schmidt, placing the rifle barrel under his chin.\nWALTI don\u2019t need the Pinata, asshole. I just wanted to see the look on your face when you knew it was me.\nSCHMIDTHappy?\nWALTYes. I like to look at my shit before I flush it.\nJENKOThat\u2019s pretty weird, man.\nSCHMIDTDo you also like to talk to it?\nWalt gives Schmidt a kiss on the cheek.\nWALTYou can\u2019t harsh my mellow, man. Don\u2019t even try.",
+            "Schmidt roars with rage and throws Walt off the catwalk.\nWalt JERKS at the end of the cable, hanging by the neck. The entire Prom looks up as he shits and pisses his white tuxedo.\nAfter a moment of shocked silence, girls begin to scream. The Auditorium doors are kicked open by S.W.A.T. officers.\nSWAT OFFICERSLAPD!\nSwat Officers fan out and evacuate the kids.\nINT. VALLEY HIGH - AUDITORIUM - NIGHT182 182\nJenko and Schmidt walk to center stage as police officers clear out the last of the students. Schmidt watches the EMS Technicians wheel Molly out on a gurney.\nShe weakly lifts up her hand up and flips him off.\nJENKOKeeping this as a souvenir.\nJenko leans over to pick up Calvin\u2019s .357 Magnum. BANG! A bullet splinters the stage floor. Jenko whirls around to see Walt aiming the pistol with his very last shred of life."
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_338",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 122
+            },
+            {
+              "chunk_id": "chunk_311",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 107
+            },
+            {
+              "chunk_id": "chunk_339",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 122
+            }
+          ],
+          "prompt_version": "prompt_v0"
+        },
+        "scores": {
+          "model_name": "prompt_v0",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7019025493102923,
+          "rqi": 0.723904098126421,
+          "grade": "B",
+          "prompt_version": "prompt_v0"
+        }
+      },
+      "prompt_v1": {
+        "response": "In the fight between Walt and Schmidt, Walt aims his pistol at Schmidt, but Schmidt grabs the gun with one hand and punches Walt with the other, splitting his nose. They struggle against the catwalk railing, with Walt trying to push the pistol towards Schmidt. Schmidt then uses an electrical cable to wrap around Walt's neck, and after a brief struggle, Schmidt throws Walt off the catwalk. Walt hangs from the cable by his neck, eventually losing control of his bodily functions in front of the entire Prom.",
+        "metadata": {
+          "query": "What happens in the fight between Walt and Schmidt?",
+          "retrieved_chunks": [
+            "122.\nSCHMIDTYou're a bad D.A.D.\nWALTAnd you're a shitty actor. If you sold the weight of that prop gun a little more, I might not have shot your girlfriend.\nWalt SHOOTS a compact 9mm from the hip, hitting Jenko in the vest. Jenko DROPS the .357 off the catwalk.\nWalt aims his pistol towards Molly on the stage below. Schmidt GRABS Walt\u2019s gun with one hand and PUNCHES him with the other, splitting his nose in half.\nThey struggle against the catwalk railing. Walt grips the pistol like a vice, pushing it towards Schmidt, jaw grinding.\nSchmidt uses his free hand to grab an ELECTRICAL CABLE and wrap it around Walt's neck.\nWalt's face turns red and his veins pop as he muscles his gun towards Schmidt\u2019s face.\nSchmidt roars with rage and throws Walt off the catwalk.\nWalt JERKS at the end of the cable, hanging by the neck. The entire Prom looks up as he shits and pisses his white tuxedo.",
+            "107.\nSCHMIDT/JENKOHoly fucking shit.\nWalt pops an H.F.S. wafer into his mouth.\nWALTIndeed.\nWalt reveals a RIFLE perched on his knee, barrel pointed at Schmidt and Jenko.\nWALTCalvin?\nCalvin appears behind Schmidt and Jenko and pats them down.\nCALVINClean.\nWALTGo give Molly her final snack.\nCalvin leers at Schmidt and exits.\nSCHMIDTYou don\u2019t get the Pinata until I get the girl.\nWalt slowly crunches into another H.F.S. wafer. He walks up to Schmidt, placing the rifle barrel under his chin.\nWALTI don\u2019t need the Pinata, asshole. I just wanted to see the look on your face when you knew it was me.\nSCHMIDTHappy?\nWALTYes. I like to look at my shit before I flush it.\nJENKOThat\u2019s pretty weird, man.\nSCHMIDTDo you also like to talk to it?\nWalt gives Schmidt a kiss on the cheek.\nWALTYou can\u2019t harsh my mellow, man. Don\u2019t even try.",
+            "Schmidt roars with rage and throws Walt off the catwalk.\nWalt JERKS at the end of the cable, hanging by the neck. The entire Prom looks up as he shits and pisses his white tuxedo.\nAfter a moment of shocked silence, girls begin to scream. The Auditorium doors are kicked open by S.W.A.T. officers.\nSWAT OFFICERSLAPD!\nSwat Officers fan out and evacuate the kids.\nINT. VALLEY HIGH - AUDITORIUM - NIGHT182 182\nJenko and Schmidt walk to center stage as police officers clear out the last of the students. Schmidt watches the EMS Technicians wheel Molly out on a gurney.\nShe weakly lifts up her hand up and flips him off.\nJENKOKeeping this as a souvenir.\nJenko leans over to pick up Calvin\u2019s .357 Magnum. BANG! A bullet splinters the stage floor. Jenko whirls around to see Walt aiming the pistol with his very last shred of life."
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_338",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 122
+            },
+            {
+              "chunk_id": "chunk_311",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 107
+            },
+            {
+              "chunk_id": "chunk_339",
+              "source": "data/pdfs\\21_JUMP_STREET.pdf",
+              "page": 122
+            }
+          ],
+          "prompt_version": "prompt_v1"
+        },
+        "change_summary": "The New Response differs from the Baseline Response in that it adds a graphic and unnecessary detail about Walt losing control of his bodily functions, which alters the tone and focus of the scene. This change introduces a more sensational and gratuitous element, detracting from the overall quality of the description.",
+        "scores": {
+          "model_name": "prompt_v1",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7061027230168938,
+          "rqi": 0.7251641502384014,
+          "grade": "B",
+          "prompt_version": "prompt_v1"
+        }
+      }
+    }
+  },
+  "What were the narrator's initial expectations about getting admission to FTII and how did these expectations change over time?": {
+    "question": "What were the narrator's initial expectations about getting admission to FTII and how did these expectations change over time?",
+    "prompt_results": {
+      "prompt_v0": {
+        "response": "The narrator's initial expectation was that getting admission to FTII meant they had \"arrived\" and their life was \"made,\" assuming they were set up for life and would automatically become a director upon graduation, similar to those graduating from law or engineering school.\n\nThese illusions were shattered two days into their time at FTII, and their enthusiasm was replaced by an inferiority complex because they felt unprepared and lacked knowledge compared to the other students, who were \"waxing eloquent about theories, films, and ideas\" that were unfamiliar to the narrator.",
+        "metadata": {
+          "query": "What were the narrator's initial expectations about getting admission to FTII and how did these expectations change over time?",
+          "retrieved_chunks": [
+            "16\nthis time for the editing and not the direction course. I got admission. The day I \nreceived the telegram, informing me about my admission to FTII, was the happiest \nday of my life. I was delirious with joy. I thought I had arrived and my life was \nmade. This thought stemmed from naivet\u00e9. Sitting in Nagpur, I had only heard of \nthe ten to \ufb01  fteen names of really successful people who had graduated from FTII \nso I assumed that getting admission meant I was set up for life. I looked at my \nadmission in the Institute as one looks at getting into law school or engineering. \nOnce you get in and work hard, the moment you graduate, you become a director. \nAll these illusions were shattered two days into my time at FTII. My enthusiasm \nwas replaced by an inferiority complex. I was from a small town in the midst of \nstudents waxing eloquent about theories, \ufb01  lms, and ideas that were Greek and \nLatin to me. It took me time but I found my feet again and got my voice back.",
+            "to Mumbai to take the exam. There I learnt that the entrance exam for FTII was \nexactly like bank exams, and anyone studying for it would clear it without blinking. I \nalso realised that seats for the direction course were few and almost everyone applied \nfor this course. I came back to Nagpur and enrolled myself in the Faculty of Law as \nthat seemed like a reasonable option if things did not work out. Alongside, I started \npreparing for the FTII exam. The next year (1984), I applied again to FTII but \n03_Introduction.indd   1503_Introduction.indd   15 5/31/2010   1:47:30 AM5/31/2010   1:47:30 AM",
+            "money to put up the next one. On those rare occasions, if anything was earned over \nand above the production cost, it ensured a grand meal for our entire group.\nIt was not dif\ufb01 cult to speak to my father the second time. Intuitive and observant, \nhe was not blind to my growing passion for theatre. The suggestion to tread this \npath in earnest came from my father. He told me to enrol in a program to get \nformal education (my father is a great believer in learning) in the \ufb01  eld of writing, \ndirecting, and storytelling. The natural choice was to apply to the Film and T elevision \nInstitute of India (FTII). \nMy \ufb01 rst attempt (1983) to get into FTII in the direction course was unsuccessful. I \nhad very little knowledge of the exam and the enrolment procedures. I had travelled \nto Mumbai to take the exam. There I learnt that the entrance exam for FTII was \nexactly like bank exams, and anyone studying for it would clear it without blinking. I"
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_369",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 15
+            },
+            {
+              "chunk_id": "chunk_368",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 14
+            },
+            {
+              "chunk_id": "chunk_367",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 14
+            }
+          ],
+          "prompt_version": "prompt_v0"
+        },
+        "scores": {
+          "model_name": "prompt_v0",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7019025493102923,
+          "rqi": 0.723904098126421,
+          "grade": "B",
+          "prompt_version": "prompt_v0"
+        }
+      },
+      "prompt_v1": {
+        "response": "The narrator's initial expectations about getting admission to FTII were that it would guarantee a successful career as a director. They thought that getting into FTII was similar to getting into law school or engineering, where hard work after admission would automatically lead to success. However, these expectations were shattered when they actually joined FTII and were exposed to the realities of the film industry and the high level of competition among students. The narrator's enthusiasm and confidence gave way to an inferiority complex as they struggled to keep up with their peers who were more knowledgeable about film theories and ideas. Over time, the narrator was able to find their footing and regain their confidence, but their initial illusions about the ease of success after getting into FTII were dispelled.",
+        "metadata": {
+          "query": "What were the narrator's initial expectations about getting admission to FTII and how did these expectations change over time?",
+          "retrieved_chunks": [
+            "16\nthis time for the editing and not the direction course. I got admission. The day I \nreceived the telegram, informing me about my admission to FTII, was the happiest \nday of my life. I was delirious with joy. I thought I had arrived and my life was \nmade. This thought stemmed from naivet\u00e9. Sitting in Nagpur, I had only heard of \nthe ten to \ufb01  fteen names of really successful people who had graduated from FTII \nso I assumed that getting admission meant I was set up for life. I looked at my \nadmission in the Institute as one looks at getting into law school or engineering. \nOnce you get in and work hard, the moment you graduate, you become a director. \nAll these illusions were shattered two days into my time at FTII. My enthusiasm \nwas replaced by an inferiority complex. I was from a small town in the midst of \nstudents waxing eloquent about theories, \ufb01  lms, and ideas that were Greek and \nLatin to me. It took me time but I found my feet again and got my voice back.",
+            "to Mumbai to take the exam. There I learnt that the entrance exam for FTII was \nexactly like bank exams, and anyone studying for it would clear it without blinking. I \nalso realised that seats for the direction course were few and almost everyone applied \nfor this course. I came back to Nagpur and enrolled myself in the Faculty of Law as \nthat seemed like a reasonable option if things did not work out. Alongside, I started \npreparing for the FTII exam. The next year (1984), I applied again to FTII but \n03_Introduction.indd   1503_Introduction.indd   15 5/31/2010   1:47:30 AM5/31/2010   1:47:30 AM",
+            "money to put up the next one. On those rare occasions, if anything was earned over \nand above the production cost, it ensured a grand meal for our entire group.\nIt was not dif\ufb01 cult to speak to my father the second time. Intuitive and observant, \nhe was not blind to my growing passion for theatre. The suggestion to tread this \npath in earnest came from my father. He told me to enrol in a program to get \nformal education (my father is a great believer in learning) in the \ufb01  eld of writing, \ndirecting, and storytelling. The natural choice was to apply to the Film and T elevision \nInstitute of India (FTII). \nMy \ufb01 rst attempt (1983) to get into FTII in the direction course was unsuccessful. I \nhad very little knowledge of the exam and the enrolment procedures. I had travelled \nto Mumbai to take the exam. There I learnt that the entrance exam for FTII was \nexactly like bank exams, and anyone studying for it would clear it without blinking. I"
+          ],
+          "retrieved_metadata": [
+            {
+              "chunk_id": "chunk_369",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 15
+            },
+            {
+              "chunk_id": "chunk_368",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 14
+            },
+            {
+              "chunk_id": "chunk_367",
+              "source": "data/pdfs\\3-Idiots-Screenplay-Book.pdf",
+              "page": 14
+            }
+          ],
+          "prompt_version": "prompt_v1"
+        },
+        "change_summary": "The New Response differs from the Baseline Response in that it provides a more nuanced and detailed explanation of the narrator's expectations and disillusionment, with a clearer structure and a more realistic portrayal of the narrator's journey. The change is an improvement, as it adds depth and context to the narrative, making it more grounded and relatable, while also introducing a new aspect of the narrator's development, their eventual regain of confidence.",
+        "scores": {
+          "model_name": "prompt_v1",
+          "retrieval": 0.5333333333333333,
+          "generation": 1.0,
+          "ragas": 0.7061027230168938,
+          "rqi": 0.7251641502384014,
+          "grade": "B",
+          "prompt_version": "prompt_v1"
+        }
+      }
+    }
+  }
+}

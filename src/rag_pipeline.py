@@ -80,7 +80,7 @@ def get_llm(provider):
     else:
         raise ValueError(f"Unknown LLM provider: {provider}")
 
-def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offline", llm_provider="openai"):
+def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offline", llm_provider="openai", system_prompt=None, prompt_version="prompt_v0"):
     """
     End-to-end RAG function using LCEL. 
     Returns a dictionary with query, answer, and retrieved documents.
@@ -135,12 +135,31 @@ def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offlin
     
     retriever = vectorstore.as_retriever(search_kwargs={"k": top_k})
     
-    template = """Answer the question based only on the following context:
-    {context}
+    # Check for Env Var override if argument is missing
+    if system_prompt is None:
+        system_prompt = os.getenv("RAG_SYSTEM_PROMPT")
+        # Also try to grab prompt_version from env if possible for logging/metadata
+        env_prompt_ver = os.getenv("RAG_PROMPT_VERSION")
+        if env_prompt_ver:
+            prompt_version = env_prompt_ver
 
-    Question: {question}
-    """
-    prompt = PromptTemplate.from_template(template)
+    if system_prompt:
+        from langchain_core.prompts import ChatPromptTemplate
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", """Answer the question based only on the following context:
+            {context}
+
+            Question: {question}""")
+        ])
+    else:
+        template = """Answer the question based only on the following context:
+        {context}
+
+        Question: {question}
+        """
+        prompt = PromptTemplate.from_template(template)
+        
     output_parser = StrOutputParser()
 
     # 5. Define Formatting Helper
@@ -192,7 +211,8 @@ def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offlin
         "query": query,
         "answer": final_result["answer"],
         "retrieved_chunks": [doc.page_content for doc in final_result["context"]],
-        "retrieved_metadata": [doc.metadata for doc in final_result["context"]]
+        "retrieved_metadata": [doc.metadata for doc in final_result["context"]],
+        "prompt_version": prompt_version
     }
 
 if __name__ == "__main__":
