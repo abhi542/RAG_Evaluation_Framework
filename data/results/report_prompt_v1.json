@@ -1,0 +1,8 @@
+{
+    "model_name": "prompt_v1",
+    "retrieval": 0.5333333333333333,
+    "generation": 1.0,
+    "ragas": 0.7061027230168938,
+    "rqi": 0.7251641502384014,
+    "grade": "B"
+}

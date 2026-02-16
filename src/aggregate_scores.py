@@ -2,7 +2,34 @@ import json
 import os
 import argparse
 
-def aggregate_scores():
+def get_justification(retrieval, generation, ragas):
+    justifications = []
+    
+    # Retrieval Analysis
+    if retrieval < 0.6:
+        justifications.append("❌ Retrieval is the bottleneck. The system struggled to find relevant documents. This implies that your embedding model (all-MiniLM-L6-v2) may not understand the domain-specific terms in the queries.")
+    else:
+        justifications.append("✅ Retrieval is healthy. The system is consistently finding the right context.")
+
+    # Generation Analysis
+    if generation < 0.6:
+        justifications.append("❌ Factuality is low. The LLM missed mandated keywords. It might be hallucinating or summarizing too aggressively, missing key details.")
+    elif generation > 0.8:
+        justifications.append("✅ Factuality is high. The LLM is accurately including the required keywords and numbers.")
+
+    # RAGAS Analysis
+    if ragas < 0.6:
+        justifications.append("❌ Reasoning (RAGAS) is poor. While the system might find keywords, the AI Judge found the answers unfaithful or irrelevant to the complex questions.")
+    elif ragas > 0.8:
+        justifications.append("✅ Reasoning is strong. The system handles complex queries well and produces faithful answers.")
+    
+    # Combined Paradox
+    if retrieval > 0.8 and ragas < 0.5:
+        justifications.append("⚠️ The 'RAG Paradox' is detected: Good Retrieval but Bad Reasoning. The LLM has the data but fails to synthesize it correctly. Try a smarter LLM (e.g., Upgrade from 8b to 70b).")
+        
+    return "\n".join(justifications)
+
+def aggregate_scores(save_name=None):
     print("\n--- RAG Quality Index (RQI) Report ---\n")
     
     # 1. Load Scores
@@ -53,15 +80,31 @@ def aggregate_scores():
     print(f"System Grade:               {grade}")
     print("-" * 40)
     
-    # Interpretation
-    if retrieval < 0.5:
-        print("\n[CRITICAL] Retrieval is failing. Your index or chunks are poor. Fix this first.")
-    elif generation < 0.5:
-        print("\n[WARNING] LLM is not using the retrieved context correctly. Check prompts.")
-    elif ragas < 0.5:
-        print("\n[NOTICE] System answers simplistic questions but fails on reasoning.")
-    else:
-        print("\n[SUCCESS] System is healthy across all metrics.")
+    # 5. Detailed Justification
+    print("\n📝 SYSTEM JUSTIFICATION:")
+    print(get_justification(retrieval, generation, ragas))
+    print("-" * 40)
+
+    # 6. Save Report
+    report_data = {
+        "model_name": save_name if save_name else "default",
+        "retrieval": retrieval,
+        "generation": generation,
+        "ragas": ragas,
+        "rqi": rqi,
+        "grade": grade
+    }
+    
+    if save_name:
+        filename = f"data/results/report_{save_name}.json"
+        with open(filename, "w") as f:
+            json.dump(report_data, f, indent=4)
+        print(f"\n[INFO] Full report saved to: {filename}")
+        print("You can compare this with other models later.")
 
 if __name__ == "__main__":
-    aggregate_scores()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--save_name", type=str, help="Name of the model/run to save results (e.g. 'groq_8b', 'gemini_flash')")
+    args = parser.parse_args()
+    
+    aggregate_scores(args.save_name)

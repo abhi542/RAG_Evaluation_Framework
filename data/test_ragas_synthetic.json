@@ -1,14 +1,18 @@
 [
     {
-        "query": "Analyze the shift in the conflict's intensity at the end of the scene. What specific elements indicate the hand-to-hand combat phase concluded, and how did Calvin and the rest of the Gang contribute to the immediate threat?",
-        "ground_truth": "The hand-to-hand combat phase concluded when Schmidt finished the last Angry White Boy and brushed himself off. The conflict immediately escalated when Calvin pointed out the BUTTERFLY KNIFE sticking out of Schmidt's torso, revealing Schmidt was severely injured. The threat intensified further when Tim suddenly reappeared with spinning nunchucks, prompting Calvin to aim and fire a smoking .357 MAGNUM at Tim. Finally, the rest of the Gang contributed to the threat by revealing that they were also armed with guns hidden in their waistbands."
+        "query": "How does the character of Rancho react to the ragging and what can be inferred about his personality?",
+        "ground_truth": "Rancho remains silent and rooted to the spot despite the teasing and humiliation. This suggests that he is a calm and stoic individual who may not react impulsively to provocation. The fact that he holds his hand over his heart and mumbles after being ridiculed implies that he may be a sentimental and emotional person. Overall, Rancho's reaction to ragging reveals his character as a calm and sensitive individual who may be more prone to introspection than outbursts of anger or aggression."
     },
     {
-        "query": "Analyze the structure of the provided data points. What conclusions can be drawn about the relationship between Figure 23.4 and Figure 23.5, considering the single numerical reference?",
-        "ground_truth": "Figure 23.4 is titled 'Right Triangle' and Figure 23.5 is titled 'Law of Cosines'. The presence of a single page number, 127, immediately following both entries suggests that both the Right Triangle (Figure 23.4) and the Law of Cosines (Figure 23.5) are located or referenced on page 127 of the document."
+        "query": "How does the use of objects in 3 Idiots affect the emotional depth of the scenes and the dialogue?",
+        "ground_truth": "The use of objects in 3 Idiots helps to convey complex emotions without the need for lengthy dialogue, allowing the scenes to be more concise and emotionally impactful. This creates a deeper emotional connection with the characters and the audience, making the story more engaging and memorable. Without the aid of objects, the scenes would have required more lines of dialogue, potentially making them feel like sermons. The objects serve as a visual representation of the characters' emotions, making it easier for the audience to understand and relate to them. This approach enables the storytellers to effectively convey the emotional depth of the scenes, making the story more impactful and memorable."
     },
     {
-        "query": "What specific textual evidence points to the cause of the Director's rage, and how is Rancho implicated as the target of the Director's violence?",
-        "ground_truth": "The Director's rage is triggered by the discovery of a 'crumpled question paper on the ground,' which, combined with his shouts of 'Thief!' suggests an issue of academic misconduct or theft. Rancho is implicated because after the Director picks up the paper and looks at it, his 'gaze focusses on Rancho,' immediately followed by the Director taking the umbrella and starting to hit him. Rancho's silent acceptance of the blows further emphasizes his role as the target."
+        "query": "Why does Walt's face turn red and his veins pop as he fights Schmidt?",
+        "ground_truth": "Walt's face turns red and his veins pop as he muscles his gun towards Schmidt's face, indicating that he is exerting extreme physical effort to push the gun towards Schmidt's face, causing him to strain and physically strain himself."
+    },
+    {
+        "query": "How did the narrator's experience at FTII change their perspective on success and what did they learn from this experience?",
+        "ground_truth": "The narrator initially thought that getting admission to FTII meant they were set up for life and would become a director after graduating. However, this illusion was shattered when they encountered students who were knowledgeable about film theories and ideas. They developed an inferiority complex but eventually found their feet and got their voice back. Through this experience, the narrator learned that success is not solely dependent on admission to a prestigious institution and that they needed to work hard and develop their skills to achieve their goals."
     }
 ]

@@ -155,37 +155,37 @@ python src/embed_store.py
 python main.py --llm_provider gemini
 ```
 
-**3. Run Verification Suite**:
+**3. Run Unified Evaluation Suite (One-Click)**:
 ```powershell
-# Generate Synthetic Test Data (Automated)
-python src/generate_synthetic_data.py --llm_provider gemini --num_samples 10
-
-# Run All benchmarks
-python src/eval_retrieval.py --test_file data/test_retrieval_synthetic.json
-python src/eval_generation.py --test_file data/test_generation_synthetic.json --llm_provider gemini
-python src/eval_ragas.py --test_file data/test_ragas_synthetic.json --llm_provider gemini
-
-# Get Final Report Card
-python src/aggregate_scores.py
+# Run the full pipeline (Values: gemini, groq, openai)
+python src/run_eval.py --llm_provider groq --run_name groq_demo_v1
 ```
+This single command will:
+1.  Run Retrieval Benchmark.
+2.  Run Generation Consistency Check.
+3.  Run AI-Judge (RAGAS) Verification.
+4.  Aggregate scores and save a JSON report to `data/results/`.
 
 ---
 
 ### 4. Sample Output Report
-When you run `python src/aggregate_scores.py`, the system generates a unified Health Report:
+The system generates a human-readable CLI report and a saved JSON file.
 
 ```text
 --- RAG Quality Index (RQI) Report ---
 
-Retrieval Score (Recall):   0.80  (Weight: 0.4)
-Generation Score (Facts):   0.95  (Weight: 0.3)
+Retrieval Score (Recall):   0.53  (Weight: 0.4)
+Generation Score (Facts):   0.87  (Weight: 0.3)
 RAGAS Score (Reasoning):    0.72  (Weight: 0.3)
 ----------------------------------------
-Final RQI Score:            0.82 / 1.00
-System Grade:               A
+Final RQI Score:            0.69 / 1.00
+System Grade:               C
 ----------------------------------------
 
-[SUCCESS] System is healthy across all metrics.
+📝 SYSTEM JUSTIFICATION:
+❌ Retrieval is the bottleneck. The system struggled to find relevant documents. 
+   This implies that your embedding model may not understand domain-specific terms.
+✅ Factuality is High. The LLM is accurately including the required keywords.
 ```
 
 ---

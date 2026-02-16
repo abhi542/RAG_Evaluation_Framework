@@ -94,6 +94,8 @@ def generate_data(docs_file, num_samples=5, llm_provider="openai"):
             
         except Exception as e:
             print(f"Failed to generate for chunk {chunk['chunk_id']}: {e}")
+            # Try to debug by running without parser if possible, or just print typical error
+            # For now just let the user know.
 
     # Save to files
     print("\nSaving generated datasets...")

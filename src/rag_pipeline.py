@@ -24,7 +24,7 @@ def get_llm(provider):
         api_key = os.getenv("OPENAI_API_KEY")
         if not api_key:
             raise ValueError("OPENAI_API_KEY not found")
-        return ChatOpenAI(model="gpt-3.5-turbo", openai_api_key=api_key)
+        return ChatOpenAI(model="gpt-3.5-turbo", openai_api_key=api_key, temperature=0)
     elif provider == "vertex":
         try:
             from langchain_google_vertexai import VertexAI
@@ -33,7 +33,7 @@ def get_llm(provider):
             
         project = os.getenv("GCP_PROJECT")
         location = os.getenv("GCP_REGION")
-        return VertexAI(model_name="gemini-pro", project=project, location=location)
+        return VertexAI(model_name="gemini-pro", project=project, location=location, temperature=0)
     elif provider == "grok":
         try:
              from langchain_openai import ChatOpenAI
@@ -48,7 +48,8 @@ def get_llm(provider):
         return ChatOpenAI(
             model="grok-beta", 
             openai_api_key=api_key, 
-            openai_api_base="https://api.x.ai/v1"
+            openai_api_base="https://api.x.ai/v1",
+            temperature=0
         )
     elif provider == "gemini":
         try:
@@ -60,13 +61,26 @@ def get_llm(provider):
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found in .env")
             
-        return ChatGoogleGenerativeAI(model="gemini-flash-latest", google_api_key=api_key)
-        # return ChatGoogleGenerativeAI(model="gemini-flash-lite-latest", google_api_key=api_key)
+        return ChatGoogleGenerativeAI(model="gemini-flash-latest", google_api_key=api_key, temperature=0)
+
+    elif provider == "groq":
+        try:
+             from langchain_groq import ChatGroq
+        except ImportError:
+             raise ImportError("langchain-groq is not installed.")
+             
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            raise ValueError("GROQ_API_KEY not found in .env")
+            
+        print(f"[DEBUG] Using GROQ_API_KEY ending in: ...{api_key[-4:]}")
+        
+        return ChatGroq(model_name="llama-3.3-70b-versatile", groq_api_key=api_key, temperature=0)
 
     else:
         raise ValueError(f"Unknown LLM provider: {provider}")
 
-def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offline", llm_provider="openai"):
+def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offline", llm_provider="openai", system_prompt=None, prompt_version="prompt_v0"):
     """
     End-to-end RAG function using LCEL. 
     Returns a dictionary with query, answer, and retrieved documents.
@@ -100,6 +114,54 @@ def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offlin
     Helpful Answer:"""
     custom_rag_prompt = PromptTemplate.from_template(template)
 
+    # Load environment variables with override to pick up new keys
+    load_dotenv(override=True)
+    
+    # 3. Setup RAG Chain
+    # ... (rest of the setup code remains similar, but we need to ensure local variables are refreshed)
+    
+    # Re-initialize LLM and Embeddings to ensure fresh API keys are used if env changed
+    # (Checking if it's cheap to re-init. It is.)
+    try:
+        llm = get_llm(llm_provider)
+    except Exception as e:
+        return {"error": f"Failed to initialize LLM: {e}"}
+    
+    try:
+        embeddings = get_embeddings(embedding_provider)
+        vectorstore = FAISS.load_local(index_dir, embeddings, allow_dangerous_deserialization=True)
+    except Exception as e:
+        return {"error": f"Failed to load index/embeddings: {e}"}
+    
+    retriever = vectorstore.as_retriever(search_kwargs={"k": top_k})
+    
+    # Check for Env Var override if argument is missing
+    if system_prompt is None:
+        system_prompt = os.getenv("RAG_SYSTEM_PROMPT")
+        # Also try to grab prompt_version from env if possible for logging/metadata
+        env_prompt_ver = os.getenv("RAG_PROMPT_VERSION")
+        if env_prompt_ver:
+            prompt_version = env_prompt_ver
+
+    if system_prompt:
+        from langchain_core.prompts import ChatPromptTemplate
+        prompt = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", """Answer the question based only on the following context:
+            {context}
+
+            Question: {question}""")
+        ])
+    else:
+        template = """Answer the question based only on the following context:
+        {context}
+
+        Question: {question}
+        """
+        prompt = PromptTemplate.from_template(template)
+        
+    output_parser = StrOutputParser()
+
     # 5. Define Formatting Helper
     def format_docs(docs):
         return "\n\n".join(doc.page_content for doc in docs)
@@ -109,25 +171,48 @@ def rag(query, index_dir="data/faiss_index", top_k=3, embedding_provider="offlin
     
     rag_chain_from_docs = (
         RunnablePassthrough.assign(context=(lambda x: format_docs(x["context"])))
-        | custom_rag_prompt
+        | prompt
         | llm
-        | StrOutputParser()
+        | output_parser
     )
 
     rag_chain_with_source = RunnableParallel(
         {"context": retriever, "question": RunnablePassthrough()}
     ).assign(answer=rag_chain_from_docs)
 
-    # 7. Run Chain
-    # invoke takes the query string directly because of RunnablePassthrough() in "question"
-    result = rag_chain_with_source.invoke(query)
+    # 4. Invoke with Retry Logic for Rate Limits
+    import time
+    max_retries = 5
+    base_delay = 20 # seconds
+    
+    print(f"Invoking RAG chain for query: '{query}'")
+    
+    final_result = None
+    for attempt in range(max_retries):
+        try:
+            final_result = rag_chain_with_source.invoke(query)
+            break # Break loop if successful
+        except Exception as e:
+            error_msg = str(e)
+            if "429" in error_msg or "Rate limit" in error_msg or "quota" in error_msg.lower():
+                wait_time = base_delay * (attempt + 1) + 60 # Aggressive backoff: 80s, 100s, 120s...
+                print(f"\n[WARNING] Rate limit hit. Sleeping {wait_time}s before retry {attempt+1}/{max_retries}...")
+                print(f"Error details: {error_msg[:200]}...") # Print snippet only
+                time.sleep(wait_time)
+            else:
+                # If it's not a rate limit, raise immediately
+                raise e
+    
+    if final_result is None:
+        raise Exception(f"Failed to process query after {max_retries} retries due to rate limits.")
     
     # Format output
     return {
         "query": query,
-        "answer": result["answer"],
-        "retrieved_chunks": [doc.page_content for doc in result["context"]],
-        "retrieved_metadata": [doc.metadata for doc in result["context"]]
+        "answer": final_result["answer"],
+        "retrieved_chunks": [doc.page_content for doc in final_result["context"]],
+        "retrieved_metadata": [doc.metadata for doc in final_result["context"]],
+        "prompt_version": prompt_version
     }
 
 if __name__ == "__main__":
